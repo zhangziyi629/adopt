@@ -105,9 +105,11 @@ public class AdminController {
         List<Admin> admins = adminService.findByName(adminName);
         if(admins!=null){
             PageInfo page = new PageInfo(admins,2);
+            System.out.println("");
             return Message.success().add("pageInfo",page);
         }else{
             return Message.fail();
+
         }
 
     }
